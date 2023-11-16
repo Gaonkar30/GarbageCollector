@@ -1,0 +1,52 @@
+.Task {
+  height: 4em;
+  width: 55vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: gainsboro;
+  border: 2px black solid;
+  border-radius: 12px;
+}
+.AreaName {
+  width: 30vh;
+}
+.AreaName h3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.bbb {
+  position: absolute;
+  right: 7%;
+  top: 7%;
+  border-radius: 12px;
+  width: 20vh;
+  height: 3em;
+  color: #000;
+  font-size: 14px;
+  font-weight: 900;
+}
+.converted {
+  position: absolute;
+  left: 0;
+}
+#convertedarea {
+  display: flex;
+  text-align: center;
+  position: absolute;
+  left: 10%;
+  list-style:none;
+  margin-left:30px;
+}
+#convertedarea li {
+    font-size: 20px;
+  padding-right: 8px;
+}
