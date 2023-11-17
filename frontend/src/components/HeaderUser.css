@@ -9,7 +9,7 @@
     width:min-content;
 }
 
-ul{
+/* ul{
     margin-left:50em;
     margin-top: 2em;
     display:flex;
@@ -17,7 +17,7 @@ ul{
     align-items: center;
     justify-content: flex-end;
     
-}
+} */
 .nav-link{
     font-size: 1.2em;
     color: black;
