@@ -6,4 +6,5 @@
     left:7.5%;
     color: black;
     background-color: aliceblue;
+    overflow-y: auto;
 }
