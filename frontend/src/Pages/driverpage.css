@@ -1,8 +1,10 @@
 .driverPage{
-    width:196.1vh;   
+    width:196.1vh;  
+    overflow-y: hidden; 
 }
 .driverHeader{
     position: absolute;
     top:0;
     width: 196.1vh;
+    overflow-y: hidden; 
 }
