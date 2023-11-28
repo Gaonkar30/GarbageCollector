@@ -129,7 +129,7 @@ function Task(props) {
       <div>
         <div className="mapshow">
           <div id="map" ref={mapRef}></div>
-          <CloseIcon id="close" onClick={() => hide("map")} />
+          <CloseIcon id="clos" onClick={() => hide("map")} />
         </div>
       </div>
     </div>
