@@ -19,10 +19,10 @@ function TeamCard(props) {
                         <h4>{props.email}</h4>
                     </div>
                     <div class="team-social">
-                        <a href={props.twitterLink} class="social-tw"> <TwitterIcon/><i class="fab fa-twitter"></i></a>
-                        <a href={props.facebookLink} class="social-fb"><FacebookIcon/> <i class="fab fa-facebook-f"></i></a>
-                        <a href={props.LinkedinLink} class="social-li"> <LinkedInIcon/><i class="fab fa-linkedin-in"></i></a>
-                        <a href={props.InstagramLink} class="social-in"><InstagramIcon/> <i class="fab fa-instagram"></i></a>
+                        <a href={props.twitterLink} class="social-tw" target="_blank"> <TwitterIcon/><i class="fab fa-twitter"></i></a>
+                        <a href={props.facebookLink} class="social-fb" target="_blank"><FacebookIcon/> <i class="fab fa-facebook-f"></i></a>
+                        <a href={props.LinkedinLink} class="social-li" target="_blank"> <LinkedInIcon/><i class="fab fa-linkedin-in"></i></a>
+                        <a href={props.InstagramLink} class="social-in" target="_blank"><InstagramIcon/> <i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>

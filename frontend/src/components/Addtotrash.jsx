@@ -53,7 +53,7 @@ const hide = function(id){
         <div className="adding" id="adding">
           <div className="heading">
             <h3>Request Summary</h3>
-            <CloseIcon id="close" onClick={()=> hide("adding")} />
+            <CloseIcon id="closse" onClick={()=> hide("adding")} />
           </div>
           <div className="orderdetails">
             <p>Number of Bags: {cartCount}</p>
