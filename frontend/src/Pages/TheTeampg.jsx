@@ -15,14 +15,15 @@ function TheTeampg() {
         <div class="row">
 
 
-           <TeamCard imgaddress={require("../components/boy.png")} teamName="Abinav Hubli" title="some guy" persondes="nigga" email="abinavp@gmail.com" twitterlink="#" facebooklink="#" LinkedinLink="#" InstagramLink="#" ></TeamCard>
+<TeamCard imgaddress={require("../components/boy.png")} teamName="Abinav Virupakshi" title="Plays Badmintion" persondes="Logical thinker
+" email="abinavvp@gmail.com" twitterlink="https://www.twitter.com/" facebooklink="https://www.facebook.com/" LinkedinLink="https://www.linkedin.com/" InstagramLink="https://www.instagram.com/" ></TeamCard>
 
-           <TeamCard imgaddress={require("../components/boy.png")} teamName="Akash G  Gaonkar" title="some guy" persondes="nigga" email="akash@gmail.com" twitterlink="#" facebooklink="#" LinkedinLink="#" InstagramLink="#" ></TeamCard>
+<TeamCard imgaddress={require("../components/boy.png")} teamName="Akash G Gaonkar" title="Beatboxer" persondes="Gym lover" email="akashgg@gmail.com" twitterlink="https://www.twitter.com/" facebooklink="https://www.facebook.com/" LinkedinLink="https://www.linkedin.com/" InstagramLink="https://www.instagram.com/" ></TeamCard>
 
-           <TeamCard imgaddress={require("../components/boy.png")} teamName="Abishek Kundapur" title="some guy" persondes="nigga" email="abhishek@gmail.com" twitterlink="#" facebooklink="#" LinkedinLink="#" InstagramLink="#" ></TeamCard>
+<TeamCard imgaddress={require("../components/boy.png")} teamName="Abishek Kundapur" title="Rubick's Cube solver" persondes="Chess lover" email="abishek@gmail.com" twitterlink="https://www.twitter.com/" facebooklink="https://www.facebook.com/" LinkedinLink="https://www.linkedin.com/" InstagramLink="https://www.instagram.com/" ></TeamCard>
 
-           
-        </div>
+
+</div>
 
     </div>
     </div>

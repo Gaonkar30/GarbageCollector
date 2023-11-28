@@ -25,9 +25,19 @@ function OrderStatuspg() {
               <tbody>
                 {/* Add your data here */}
                 <tr>
-                  <td>I dont know what to put here</td>
-                  <td>I dont know what to put here</td>
-                  <td>I dont know what to put here</td>
+                  <td>12/11/23</td>
+                  <td>12:04pm</td>
+                  <td>pending</td>
+                </tr>
+                <tr>
+                  <td>13/11/23</td>
+                  <td>15:04pm</td>
+                  <td>pending</td>
+                </tr>
+                <tr>
+                  <td>12/11/23</td>
+                  <td>19:04pm</td>
+                  <td>pending</td>
                 </tr>
                 {/* Add more rows as needed */}
               </tbody>
