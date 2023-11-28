@@ -6,9 +6,9 @@ function AboutUs() {
     <div className="Aboutus">
       <h2 className="heading"> The Team </h2>
       <div className="cardcontainer">
-        <Card className="card" name="Abhinav V" img="" />
-        <Card className="card" name="Akash G Gaonkar" img="" />
-        <Card className="card" name="asdfsafasdf" img="" />
+        <Card className="card" name="Abhinav V" img={require("./boy.png")} />
+        <Card className="card" name="Akash G Gaonkar" img={require("./boy.png")} />
+        <Card className="card" name="Abishek K" img={require("./boy.png")} />
       </div>
     </div>
   );
