@@ -70,13 +70,23 @@ function Task(props) {
     // Initialize the map
     const map = new window.google.maps.Map(document.getElementById("map"), {
       center: { lat: latitude, lng: longitude },
-      zoom: 15, // Adjust the zoom level as needed
+      zoom: 15, 
     });
 
-    // Add a marker for the specified location
+   
+    
     new window.google.maps.Marker({
       position: { lat: latitude, lng: longitude },
       map: map,
+      icon: {
+        path: window.google.maps.SymbolPath.CIRCLE,
+        fillColor: "green",
+        fillOpacity: 0.2,
+        strokeColor: "green",
+        radius:5,
+        strokeWeight: 0.8,
+        scale: 190,
+      },
       title: "Location",
     });
   };
@@ -129,7 +139,7 @@ function Task(props) {
       <div>
         <div className="mapshow">
           <div id="map" ref={mapRef}></div>
-          <CloseIcon id="clos" onClick={() => hide("map")} />
+          <CloseIcon id="close" onClick={() => hide("map")} />
         </div>
       </div>
     </div>

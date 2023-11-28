@@ -19,8 +19,8 @@ function DriverHeader() {
           
           <NavLink to='/' ><DeleteSweepIcon className="icon"/><Head className="title">GarbageManager</Head></NavLink>
           <NavMenu className="links">
-            <NavLink to="/Tasks">Tasks</NavLink>
-            <NavLink to="/team" activeStyle>
+            <NavLink to="/driverTasks">Tasks</NavLink>
+            <NavLink to="/driverteam" activeStyle>
               The Team
             </NavLink>
             </NavMenu>
