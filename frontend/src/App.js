@@ -25,7 +25,7 @@ function App() {
           <Route path='/signin' element={<LoginPage/>}/>
           <Route path='/howtouse' element={<HowtoUsepg/>}/>
           <Route path='/team' element={<TheTeampg/>}/>
-          <Route path='/user' element={<UserPage/>}/>
+          <Route path='/citizen' element={<UserPage/>}/>
           <Route path='/Userteam' element={<UserTeam/>}/>
           <Route path='/UserHowtoUse' element={<UserHowtoUsepg/>}/>
           <Route path='/AddGarbage' element={<AddGarbage/>}/>

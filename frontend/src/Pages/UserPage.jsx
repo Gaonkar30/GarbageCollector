@@ -2,7 +2,7 @@ import React from 'react'
 import HeaderUser from "../components/HeaderUser"
 import HelloUser from '../components/HelloUser'
 import BUody from '../components/bodyuser'
-
+import './userland.css'
 function UserPage() {
   return (
     <div className='UserPage'>
@@ -10,7 +10,8 @@ function UserPage() {
     <HeaderUser/>
     </div>
     <div className='body'>
-    <HelloUser/>
+    <div className='greetings'> <HelloUser/></div>
+   
       <BUody/>
     </div>
     

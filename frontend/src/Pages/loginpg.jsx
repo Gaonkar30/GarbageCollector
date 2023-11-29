@@ -14,7 +14,7 @@ const LoginPage = () =>{
     const handleLogin = async (e) =>{
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/auth/login',{ userType, email, password });
+            const response = await axios.post('http://localhost:5000/auth/login',{ userType, email, password });
             try {
                 if(response.status===200){
                     if(response.data.token) {
