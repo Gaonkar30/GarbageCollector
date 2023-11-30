@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './OrderStatus.css';
 import HeaderUser from '../components/HeaderUser';
+import axios from 'axios';
 
 function OrderStatuspg() {
+  const userID = localStorage.getItem('userID');
+  const [req, setReq] = useState({});
+  useEffect(()=>{
+    const fetchReq = async () =>{
+      try {
+        const response = await axios.get(`http://localhost:5000/citizen/latestreq/${userID}`);
+        setReq(response.data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchReq();
+  },[]);
+  const sentToDriver = (req.completionStatus==='sent-to-driver' || req.completionStatus==='completed')
   return (
     <div className='OrderStatus'>
       <div className='header'>
@@ -11,37 +26,14 @@ function OrderStatuspg() {
       <div className='body'>
         <div className='pending'>
           <h1>
-            <u>Current Request Order:</u>
+            <u>Current Request :</u>
           </h1>
           <div className='orders'>
-            <table>
-              <thead>
-                <tr>
-                  <th>Date Of Request</th>
-                  <th>Time</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {/* Add your data here */}
-                <tr>
-                  <td>12/11/23</td>
-                  <td>12:04pm</td>
-                  <td>pending</td>
-                </tr>
-                <tr>
-                  <td>13/11/23</td>
-                  <td>15:04pm</td>
-                  <td>pending</td>
-                </tr>
-                <tr>
-                  <td>12/11/23</td>
-                  <td>19:04pm</td>
-                  <td>pending</td>
-                </tr>
-                {/* Add more rows as needed */}
-              </tbody>
-            </table>
+            <p>Date of Request : {req.dateOfReq}</p>
+            <p>Your Address : {req.address}</p>
+            <p>Quantity : {req.quantity}</p>
+            <p>Status : {req.completionStatus}</p>
+            { sentToDriver && <p> Driver : {req.driverAssigned} </p> }
           </div>
         </div>
       </div>
