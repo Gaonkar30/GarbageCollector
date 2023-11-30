@@ -1,27 +1,24 @@
+const express = require('express');
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const Request = require('../models/request');
+const Worker = require('../models/worker');
+const router = express.Router();
 
-const workerSchema = new Schema({
-    name : String,
-    email : {
-        type : String,
-        required : true
-    },
-    password : {
-        type : String,
-        required : true
-    },
-    vehicleNumberPlate : {
-        type : String,
-        required : true
-    },
-    vehicleType : {
-        type : String,
-        required : true
-    },
-    requests : [{ type: Schema.Types.ObjectId, ref: 'Request' }]
-});
+router.get('/tasks/:id', async(req, res)=>{
+    try {
+        const {id} = req.params;
+        const wkr = Worker.findById(id);
+        const tasks = wkr.tasks;
+        res.status(200).json(tasks);
+    } catch (error) {
+        res.status(500).json({error});
+    }
+})
 
-const Worker = mongoose.model('Worker', workerSchema);
-
-module.exports = Worker;
+router.post('/tasks/finish', async(req, res)=>{
+    try {
+        
+    } catch (error) {
+        res.status(500).json({error});
+    }
+})
