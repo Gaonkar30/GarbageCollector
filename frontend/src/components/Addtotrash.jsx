@@ -5,6 +5,7 @@ import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 import CloseIcon from "@mui/icons-material/Close";
 import { useNavigate } from "react-router-dom";
 import "./Addtotrash.css";
+import axios from "axios";
 var garbagebags=0;
 function Addtotrash() {
   let navigate = useNavigate();
@@ -33,12 +34,21 @@ const hide = function(id){
 }
  
 
-  const sendData = () => {
+  const sendData = async () => {
     garbagebags += cartCount;
     let path="/ReqStatus"
     // abhinav send this data to the database and store it along with the user data whichever the fkin way you want
+    const id = window.localStorage.getItem('userID');
+    console.log(id);
+    const response = await axios.post(`http://localhost:5000/citizen/newreq/${id}`, {cartCount});
+    if(response.status===200) {
+      navigate('/ReqStatus');
+      console.log(response);
+    }
+    else {
+      alert('error ordering, please try again later.');
+    }
     alert("Thank you Your Req is being Processed");
-    navigate(path);
   };
 
   return (
@@ -53,7 +63,7 @@ const hide = function(id){
         <div className="adding" id="adding">
           <div className="heading">
             <h3>Request Summary</h3>
-            <CloseIcon id="closse" onClick={()=> hide("adding")} />
+            <CloseIcon id="close" onClick={()=> hide("adding")} />
           </div>
           <div className="orderdetails">
             <p>Number of Bags: {cartCount}</p>
