@@ -8,21 +8,24 @@ import Header from '../components/Header';
 const LoginPage = () =>{
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [userType, setType] = useState('admin');
+    const [userType, setType] = useState('');
     const navigate = useNavigate();
 
     const handleLogin = async (e) =>{
         e.preventDefault();
+        localStorage.clear();
         try {
+            console.log('inside try')
             const response = await axios.post('http://localhost:5000/auth/login',{ userType, email, password });
+            console.log('after req')
             try {
                 if(response.status===200){
                     if(response.data.token) {
                         window.localStorage.setItem('token', response.data.token);
-                        window.localStorage.setItem('userType', response.data.userType);
                         window.localStorage.setItem('name', response.data.name);
-                        if(userType==='admin') navigate('/admin');
-                        if(userType==='citizen') navigate('/citizen');
+                        window.localStorage.setItem('userID', response.data.userID);
+                        if(userType==='admin') navigate('/admin'); 
+                        if(userType==='citizen') navigate('/user');
                         if(userType==='worker') navigate('/worker');
                     }
                     else alert("invalid credentials");
