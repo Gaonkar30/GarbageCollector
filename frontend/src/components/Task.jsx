@@ -7,7 +7,7 @@ function Task(props) {
   <script
     async
     defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjzqFP8e3TkQxPOzPWf0RfxiimfmAYLm4&libraries=visualization&callback=initMap"
+    src="https://maps.googleapis.com/maps/api/js?key={key}&libraries=visualization&callback=initMap"
   ></script>;
   const [locationData, setLocationData] = useState(null);
   const mapRef = useRef(null);
@@ -15,7 +15,7 @@ function Task(props) {
     const fetchData = async () => {
       try {
         const pincode = props.pincode;
-        const apiKey = "AIzaSyDED2KrlWQj7qML9yACc8TkXMk9HjrDjiU";
+        const apiKey = "your key";
         const response = await axios.get(
           `https://maps.googleapis.com/maps/api/geocode/json?address=india&components=postal_code:${pincode}&sensor=false&key=${apiKey}`
         );
@@ -57,7 +57,7 @@ function Task(props) {
 
   const viewPopup = () => {
     geocodeAddress(
-      "AIzaSyDED2KrlWQj7qML9yACc8TkXMk9HjrDjiU",
+      "yourkey",
       extractedNames,
       (latitude, longitude) => {
         // Display the map centered on the coordinates
