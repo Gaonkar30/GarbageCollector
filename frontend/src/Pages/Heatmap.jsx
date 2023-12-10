@@ -6,7 +6,7 @@ import "./heatmap.css";
 function Heatmap() {
   useEffect(() => {
     async function getCoordinates(pincode) {
-      const apiKey = "AIzaSyA-dzrhOYDlls0-9KmfsTTIlW4Jt09lON0";
+      const apiKey = "key";
       const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${pincode}&key=${apiKey}`;
 
       try {
